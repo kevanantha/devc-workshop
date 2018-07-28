@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const kondisi = Number(prompt("Masukkan sebuah angka: "));
+
+    if (isNaN(kondisi)) {
+      console.log(`bukan angka bro!`);
+    } else if (kondisi > 0) {
+        console.log(`${kondisi} adalah positif`);
+      } else {
+        if (kondisi === 0) {
+          console.log(`angka yang anda masukkan adalah ${kondisi}`);
+        } else {
+          console.log(`${kondisi} adalah negatif`);
+        }
+    }
+  </script>
+</body>
+</html>
