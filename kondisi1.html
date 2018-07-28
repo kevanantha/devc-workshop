@@ -13,13 +13,13 @@
     if (isNaN(kondisi)) {
       console.log(`bukan angka bro!`);
     } else if (kondisi > 0) {
-        console.log(`${kondisi} adalah positif`);
+      console.log(`${kondisi} adalah positif`);
+    } else {
+      if (kondisi === 0) {
+        console.log(`angka yang anda masukkan adalah ${kondisi}`);
       } else {
-        if (kondisi === 0) {
-          console.log(`angka yang anda masukkan adalah ${kondisi}`);
-        } else {
-          console.log(`${kondisi} adalah negatif`);
-        }
+        console.log(`${kondisi} adalah negatif`);
+      }
     }
   </script>
 </body>
