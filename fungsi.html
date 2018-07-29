@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function calculate(nb1, operation, nb2) {
+      if (operation === "+") {
+        return (nb1 + nb2);
+      }
+      if (operation === "-") {
+        return (nb1 - nb2);
+      }
+      if (operation === "*") {
+        return (nb1 * nb2);
+      }
+      if (operation === "/") {
+        return (nb1 / nb2);
+      }
+    }
+
+    console.log(calculate(4, "+", 6));
+    console.log(calculate(4, "-", 6));
+    console.log(calculate(2, "*", 0));
+    console.log(calculate(12, "/", 6));
+  </script>
+</body>
+</html>
