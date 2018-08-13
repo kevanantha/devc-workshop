@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    class Character {
+      constructor(name, health, strength) {
+        this.name = name;
+        this.health = health;
+        this.strength = strength;
+        this.xp = 0;
+      }
+
+      attack(target) {
+        if (this.health > 0) {
+          const damage = this.strength;
+          console.log(
+            `${this.name} attacks ${target.name} and causes ${damage} damage points`
+            );
+          target.health -= damage;
+          if (target.health > 0) {
+            console.log(
+              `${target.name} has ${target.health} left.`
+            );
+          } else {
+            target.health = 0;
+            const bonusXP = 10;
+            console.log(
+              `${this.name} killed ${target.name}`
+            );
+            this.xp += bonusXP;
+          }
+        } else {
+          console.log(
+            `${this.name} can't attack target (they've killed already)`
+          );
+        }
+      }
+
+      describe() {
+        return `${this.name} has ${this.health} health points, ${this.strength} as strength and ${this.xp} XP points`
+      }
+    }
+
+    const wahyu = new Character('Wahyu', 150, 25);
+    const ricky = new Character('Ricky', 130, 30);
+
+    console.log(`Welcome!`);
+    console.log(wahyu.describe());
+    console.log(ricky.describe());
+
+    const monster = new Character('Qadhafi', 40, 20);
+    console.log(`A wild monster appeared: named ${monster.name}`);
+
+    monster.attack(wahyu);
+    monster.attack(ricky);
+    wahyu.attack(monster);
+    ricky.attack(monster);
+
+    console.log(wahyu.describe());
+    console.log(ricky.describe());
+  </script>
+  
+</body>
+</html>
